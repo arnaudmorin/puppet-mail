@@ -1,7 +1,7 @@
 # Managed by Puppet mail module
 # Refer to `man 5 virtual` for documentation.
 
-<% @virtual_addresses.each do |key, value| -%>
-<%= key %>	<%= value %>
+<% @virtual_addresses.each do |address_line| -%>
+<%= address_line.split[0] %>	<%= address_line.split[1] %>
 <% end -%>
 
