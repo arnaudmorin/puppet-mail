@@ -97,6 +97,7 @@ class mail::postfix (
     ],
 
     # submissions & SASL acceptance
+    smtp_use_tls                        => true,
     ssl                                 => $server_hostname,
     smtpd_sasl_auth                     => true,
     submission                          => true,
