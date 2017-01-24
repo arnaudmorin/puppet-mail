@@ -163,6 +163,8 @@ class mail::postfix (
   }
 
   opendkim::domain { [$server_domain]: }
+
+  opendkim::trusted { ['127.0.0.1', 'localhost', $server_hostname]: }
 }
 
 # vi:smartindent:tabstop=2:shiftwidth=2:expandtab:
