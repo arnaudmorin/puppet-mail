@@ -46,7 +46,7 @@ class mail::certs (
   letsencrypt::certonly { 'mail':
     # Provide option to change the type of plugin being used.
     plugin        => $security_certbot_plugin,
-    webroot_paths => $security_certbot_webroot,
+    webroot_paths => [$security_certbot_webroot],
 
     # We don't need every domain we are hosting mail for defined in the cert,
     # just the FQDN of the server that is doing the mail serving.
