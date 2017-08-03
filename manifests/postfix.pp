@@ -118,8 +118,8 @@ class mail::postfix (
     sa_required_hits    => '3',
     sa_skip_rbl_checks  => '0',
     spampd_children     => '4',
-    smtp_content_filter => ['smtp:127.0.0.1:10026'], # send all mail through spamd
-    master_services     => [ '127.0.0.1:10027 inet n  -       n       -      20       smtpd'], # recieve email back from spamd
+    #smtp_content_filter => ['smtp:127.0.0.1:10026'], # send all mail through spamd
+    #master_services     => [ '127.0.0.1:10027 inet n  -       n       -      20       smtpd'], # recieve email back from spamd
 
     # Tweaked Spam Assassin matches/scoring
     sa_loadplugin       => [ 'Mail::SpamAssassin::Plugin::SPF',
